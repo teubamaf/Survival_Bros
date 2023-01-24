@@ -9,6 +9,11 @@ public class WeaponParent : MonoBehaviour
     public Animator animator;
     public float delay = 0.3f;
 
+    public bool IsAttacking { get; private set;}
+
+    public Transform circleOrigin;
+    public float radius;
+
     private bool attackBlocked;
 
     private void Update() {
@@ -37,5 +42,18 @@ public class WeaponParent : MonoBehaviour
     private IEnumerator DelayAttack() {
         yield return new WaitForSeconds(delay);
         attackBlocked = false;
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Vector3 position = circleOrigin == null ? Vector3.zero : circleOrigin.position;
+        Gizmos.DrawWireSphere(position, radius);
+    }
+
+    public void DetectColliders() {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(circleOrigin.position, radius);
+        foreach(Collider2D collider in colliders) {
+            Debug.Log(collider.name);
+        }
     }
 }

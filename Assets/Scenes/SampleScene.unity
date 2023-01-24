@@ -316,6 +316,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 988857104}
   delay: 0.3
+  circleOrigin: {fileID: 2057954023}
+  radius: 0.37
 --- !u!1 &988857102
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +329,7 @@ GameObject:
   - component: {fileID: 988857103}
   - component: {fileID: 988857104}
   - component: {fileID: 988857105}
+  - component: {fileID: 988857106}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -345,7 +348,8 @@ Transform:
   m_LocalPosition: {x: 0.0803, y: -0.0036, z: 0}
   m_LocalScale: {x: 1.0808908, y: 1.0808908, z: 1.0808908}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2057954023}
   m_Father: {fileID: 906949727}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.429, y: -180.407, z: 1.533}
@@ -421,6 +425,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &988857106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988857102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0797d39617166e9448a0ed22bd01467b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1314602723
 GameObject:
   m_ObjectHideFlags: 0
@@ -664,3 +680,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+--- !u!1 &2057954022
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057954023}
+  m_Layer: 0
+  m_Name: CircleOrigin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2057954023
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057954022}
+  m_LocalRotation: {x: 0.013392282, y: 0.99989706, z: -0.0036954358, w: -0.003597742}
+  m_LocalPosition: {x: -0.005, y: 0.099, z: -0.001}
+  m_LocalScale: {x: 0.9251626, y: 0.92516285, z: 0.9251625}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 988857103}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
