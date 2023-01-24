@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7e31c1fc2a720458fa46fa275d3ac0, type: 3}
+  m_Name: Bee
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  enemyName: Bee
+  health: 100
+  damage: 0
+  experience: 50
+  enemyPrefab: {fileID: 8309981544357892989, guid: 1cc62c1d334f3a54296f8ee17f43e194, type: 3}
